@@ -27,6 +27,10 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoLabEquipm
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
+
+//routes
+require('./routes/api-routes.js')(app);
+
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
