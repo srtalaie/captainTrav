@@ -5,8 +5,12 @@ export default {
         return axios.post('/api/addProduct', product);
     },
 
-    getProduct: function(){
+    getProducts: function(){
         return axios.get('/api/getAllProduct');
+    },
+
+    getProduct: function(id){
+        return axios.get(`/api/getProduct/${id}`);
     },
 
     updateProduct: function(id, newProduct){

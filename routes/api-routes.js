@@ -23,6 +23,12 @@ module.exports = function(app){
        .catch(err => res.status(422).json(err))
    });
 
+   app.get("/api/getProduct/:id", function(req, res){
+       db.Product.find({ _id: req.params.id })
+       .then(product => res.json(product))
+       .catch(err => res.status(422).json(err))
+   });
+
    //route = /api/updateProduct/:id to find a product and update by _id
    app.put("/api/updateProduct/:id", function(req, res){
         db.Product.findByIdAndUpdate({_id: req.params.id}, req.body)

@@ -17,7 +17,7 @@ class Products extends Component {
     }
 
     loadProducts = () => {
-        API.getProduct()
+        API.getProducts()
         .then(res => this.setState({ products: res.data }))
         .catch(err => console.log(err))
     }
@@ -33,19 +33,35 @@ class Products extends Component {
         let newProduct = {
             name: this.state.newProductName,
             description: this.state.newProductDescription,
-            imgLink: this.state.newProductImgs,
+            imgLink: this.state.newProductImgs.split(',').map(function(string){ return string.trim(); }),
             price: this.state.newProductPrice
         };
 
         API.addProduct(newProduct)
         .then(res => this.setState({ products: this.state.products.concat(res.data) }))
+        .then(() => {
+            this.setState({
+                newProductName: '',
+                newProductDescription: '',
+                newProductImgs: '',
+                newProductPrice: 0.00
+            })
+        })
         .catch(err => console.log(err))
     }
 
     render(){
         return(
             <div>
-                <h1>Sup</h1>
+                <div className="container">
+                    <div className="productCreate">
+                        <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput}></input>
+                        <input type="textarea" name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput}></input>
+                        <input type="text" name="newProductImgs" value={this.state.newProductImgs} onChange={this.handleInput}></input>
+                        <input type="text" name="newProductPrice" value={this.state.newProductPrice} onChange={this.handleInput}></input>
+                        <button onClick={this.createProduct}>Submit</button>
+                    </div>
+                </div>
             </div>
         );
     }
