@@ -17,7 +17,7 @@ let ProductSchema = new Schema({
         required: true
     }],
     price: {
-        type: mongoose.Decimal128,
+        type: Number,
         required: true
     }
 });

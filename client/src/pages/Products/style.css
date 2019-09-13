@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.productCreate {
+    display: flex;
+    flex-direction: column;
+}
+
+.productInputs {
+    margin: 10px;
+}
+
+table {
+    border: 1px grey solid;
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px grey solid;
+}

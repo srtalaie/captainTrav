@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API.js';
+import '../Products/style.css';
+import ProductCard from '../../components/ProductCard.js';
 
 class Products extends Component {
     state = {
@@ -55,12 +57,40 @@ class Products extends Component {
             <div>
                 <div className="container">
                     <div className="productCreate">
-                        <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput}></input>
-                        <input type="textarea" name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput}></input>
-                        <input type="text" name="newProductImgs" value={this.state.newProductImgs} onChange={this.handleInput}></input>
-                        <input type="text" name="newProductPrice" value={this.state.newProductPrice} onChange={this.handleInput}></input>
+                        <label for="newProductName">Name</label>
+                        <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput} className="productInputs"></input>
+                        <label for="newProductDescription">Description</label>
+                        <textarea  name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput} className="productInputs"></textarea>
+                        <label for="newProductImgs">Image URLs (comma separated list)</label>
+                        <input type="text" name="newProductImgs" value={this.state.newProductImgs} onChange={this.handleInput} className="productInputs"></input>
+                        <label for="newProductPrice">Price</label>
+                        <input type="text" name="newProductPrice" value={this.state.newProductPrice} onChange={this.handleInput} className="productInputs"></input>
                         <button onClick={this.createProduct}>Submit</button>
                     </div>
+
+                    <table className="productTable">
+                        <thead>
+                            <tr>
+                                <td>Product Name</td>
+                                <td>Product Description</td>
+                                <td>Product Images</td>
+                                <td>Product Price</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.products.map(product => {
+                                return(
+                                    <ProductCard
+                                        id = {product._id}
+                                        name = {product.name}
+                                        description = {product.description}
+                                        imgLinks = {product.imgLink}
+                                        price = {product.price}
+                                    />    
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         );
