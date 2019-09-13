@@ -24,7 +24,7 @@ module.exports = function(app){
    });
 
    //route = /api/updateProduct/:id to find a product and update by _id
-    app.put("/api/updateProduct/:id", function(req, res){
+   app.put("/api/updateProduct/:id", function(req, res){
         db.Product.findByIdAndUpdate({_id: req.params.id}, req.body)
         .then(product => res.json(product))
         .catch(err => res.status(422).json(err))
