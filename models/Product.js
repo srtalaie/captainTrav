@@ -12,6 +12,10 @@ let ProductSchema = new Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true
+    },
     imgLink: [{
         type: String,
         required: true

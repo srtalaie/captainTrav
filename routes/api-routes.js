@@ -7,6 +7,7 @@ module.exports = function(app){
        let newProduct = {
            name: req.body.name,
            description: req.body.description,
+           category: req.body.category,
            imgLink: req.body.imgLink,
            price: req.body.price
        }

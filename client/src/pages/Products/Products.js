@@ -10,6 +10,7 @@ class Products extends Component {
         password: 'admin',
         newProductName: '',
         newProductDescription: '',
+        newProductCategory: '',
         newProductImgs: [],
         newProductPrice: 0.00
     }
@@ -35,6 +36,7 @@ class Products extends Component {
         let newProduct = {
             name: this.state.newProductName,
             description: this.state.newProductDescription,
+            category: this.state.newProductCategory,
             imgLink: this.state.newProductImgs.split(',').map(function(string){ return string.trim(); }),
             price: this.state.newProductPrice
         };
@@ -45,6 +47,7 @@ class Products extends Component {
             this.setState({
                 newProductName: '',
                 newProductDescription: '',
+                newProductCategory: '',
                 newProductImgs: '',
                 newProductPrice: 0.00
             })
@@ -59,6 +62,8 @@ class Products extends Component {
                     <div className="productCreate">
                         <label for="newProductName">Name</label>
                         <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput} className="productInputs"></input>
+                        <label for="newProductCategory">Category</label>
+                        <input type="text" name="newProductCategory" value={this.state.newProductCategory} onChange={this.handleInput} className="productInputs"></input>
                         <label for="newProductDescription">Description</label>
                         <textarea  name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput} className="productInputs"></textarea>
                         <label for="newProductImgs">Image URLs (comma separated list)</label>
@@ -73,6 +78,7 @@ class Products extends Component {
                             <tr>
                                 <td>Product Name</td>
                                 <td>Product Description</td>
+                                <td>Product Category</td>
                                 <td>Product Images</td>
                                 <td>Product Price</td>
                             </tr>
@@ -84,6 +90,7 @@ class Products extends Component {
                                         id = {product._id}
                                         name = {product.name}
                                         description = {product.description}
+                                        category = {product.category}
                                         imgLinks = {product.imgLink}
                                         price = {product.price}
                                     />    
