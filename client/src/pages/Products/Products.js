@@ -12,7 +12,10 @@ class Products extends Component {
         newProductDescription: '',
         newProductCategory: '',
         newProductImgs: [],
-        newProductPrice: 0.00
+        newProductPrice: 0.00,
+        productID: '',
+        currentProductId: '',
+        beingEdited: false
     }
 
     componentDidMount(){
@@ -55,6 +58,67 @@ class Products extends Component {
         .catch(err => console.log(err))
     }
 
+    editProductSetUp = (product) => {
+            this.setState({
+                beingEdited: true,
+                currentProductId: product._id,
+                newProductName: product.name,
+                newProductDescription: product.description,
+                newProductCategory: product.category,
+                newProductImgs: product.imgLink.toString(),
+                newProductPrice: product.price
+        });
+    }
+
+    submitEditedProduct = (event) => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+        let newEditedProduct = {
+            name: this.state.newProductName,
+            description: this.state.newProductDescription,
+            category: this.state.newProductCategory,
+            imgLink: this.state.newProductImgs.split(',').map(function(string){ return string.trim(); }),
+            price: this.state.newProductPrice
+        };
+
+        API.updateProduct(this.state.currentProductId, newEditedProduct)
+        .then(res => console.log(res))
+        .then(() => {
+            this.setState({
+                beingEdited: false,
+                currentProductId: '',
+                newProductName: '',
+                newProductDescription: '',
+                newProductCategory: '',
+                newProductImgs: '',
+                newProductPrice: 0.00
+            })
+        })
+        .then(this.loadProducts)
+        .catch(err => console.log(err))
+    }
+
+    cancelEdit = () => {
+        this.setState({
+            beingEdited: false,
+            currentProductId: '',
+            newProductName: '',
+            newProductDescription: '',
+            newProductCategory: '',
+            newProductImgs: '',
+            newProductPrice: 0.00
+        })
+    }
+
+    deleteProduct = (id) => {
+        API.deleteProduct(id)
+        .then(res => console.log(res))
+        .then(this.loadProducts)
+        .catch(err => console.log(err))
+    }
+    
     render(){
         return(
             <div>
@@ -70,7 +134,14 @@ class Products extends Component {
                         <input type="text" name="newProductImgs" value={this.state.newProductImgs} onChange={this.handleInput} className="productInputs"></input>
                         <label for="newProductPrice">Price</label>
                         <input type="text" name="newProductPrice" value={this.state.newProductPrice} onChange={this.handleInput} className="productInputs"></input>
-                        <button onClick={this.createProduct}>Submit</button>
+                        {this.state.beingEdited ? (
+                            <div>
+                                <button onClick={this.submitEditedProduct}>Update Product</button>
+                                <button onClick={this.cancelEdit}>Cancel</button>
+                            </div>
+                        ): (
+                            <button onClick={this.createProduct}>Submit</button>
+                        )}
                     </div>
 
                     <table className="productTable">
@@ -93,6 +164,8 @@ class Products extends Component {
                                         category = {product.category}
                                         imgLinks = {product.imgLink}
                                         price = {product.price}
+                                        editButton = {() => this.editProductSetUp(product)}
+                                        deleteButton = {() => this.deleteProduct(product._id)}
                                     />    
                                 )
                             })}

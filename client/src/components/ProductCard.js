@@ -8,9 +8,12 @@ function renderImage(imgSrc){
     )
 }
 
-const ProductCard = ({ id, name, description, imgLinks, price, category }) => (
+const ProductCard = ({ id, name, description, imgLinks, price, category, editButton, deleteButton }) => (
     <tr data-id={id} id={id}>
-        <td>{name}</td>
+        <td>{name}
+            <button onClick={editButton}>Edit</button>
+            <button onClick={deleteButton}>Delete</button>
+        </td>
         <td>{description}</td>
         <td>{category}</td>
         <td>

@@ -18,6 +18,6 @@ export default {
     },
 
     deleteProduct: function(id){
-        return axios.delete(`/api/deletProduct/${id}`);
+        return axios.delete(`/api/deleteProduct/${id}`);
     }
 }
