@@ -1,6 +1,8 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .productCreate {
@@ -8,15 +10,25 @@
     flex-direction: column;
 }
 
+.productCreate button {
+    width: 50%;
+    margin: auto;
+}
+
 .productInputs {
     margin: 10px;
 }
 
 table {
+    margin-top: 5vw;
     border: 1px grey solid;
     border-collapse: collapse;
 }
 
 th,td {
     border: 1px grey solid;
+}
+
+thead {
+    font-weight: bold;
 }
