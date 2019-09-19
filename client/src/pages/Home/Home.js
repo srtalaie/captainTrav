@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CarouselComponent from '../../components/Carousel/Carousel.js';
 import '../Home/style.css';
+import PreviousClients from '../../components/PreviousClients/PreviousClients.js';
+import Testimonials from '../../components/Testimonials/Testimonials.js'
 
 class Home extends Component {
     
@@ -8,15 +10,25 @@ class Home extends Component {
         return(
             <div>
                 <CarouselComponent 
-                    imgLink1 = {'https://cdn.levenhuk.com/images/products/large/0/LVH-microscopes-Rainbow-50L.jpg'}
-                    imgLink2 = {'https://cdn.levenhuk.com/images/products/large/0/LVH-microscopes-Rainbow-50L.jpg'}
-                    imgLink3 = {'https://cdn.levenhuk.com/images/products/large/0/LVH-microscopes-Rainbow-50L.jpg'}
+                    imgLink1 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                    imgLink2 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                    imgLink3 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
                 />
 
-                <div className="container">
-                    <div className="previousClients">
-                        
-                    </div>
+                <div className="homePageContainer">
+                    <PreviousClients
+                        imgLink1 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
+                        imgLink2 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
+                        imgLink3 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
+                        imgLink4 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
+                        imgLink5 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
+                    />
+
+                    <Testimonials
+                        imgLink1 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                        imgLink2 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                        imgLink3 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                    />
                 </div>
             </div>
         );

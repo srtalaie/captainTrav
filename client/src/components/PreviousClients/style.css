@@ -1,0 +1,27 @@
+.previousClientsWrapper {
+    margin-top: 10vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    text-align: center;
+}
+
+.previousClients {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.client img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 18vw;
+    height: 18vw;
+}
