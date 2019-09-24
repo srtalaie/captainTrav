@@ -15,7 +15,7 @@ class Products extends Component {
     }
 
     loadProducts = () => {
-        API.getProductByCategory('Andrology')
+        API.getProductByCategory(this.state.category)
         .then(res => this.setState({ products: res.data }))
         .catch(err => console.log(err))
     }
@@ -24,6 +24,21 @@ class Products extends Component {
         return(
             <div>
                 <h1>{this.state.category}</h1>
+                    {this.state.products.length ? (
+                        <div className="productsContainer">
+                            {this.state.products.map(product => {
+                                return(
+                                    <div>
+                                        <img src={product.imgLink[1]} alt="product"></img>
+                                        <p><span className="productName">{product.name}</span> - ${product.price}</p>
+                                        <p>{product.description}</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    ) : (
+                        <h3>Loading {this.state.category} Products...</h3>
+                    )}          
             </div>
         );
     }

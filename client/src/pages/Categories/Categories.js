@@ -7,7 +7,10 @@ class Categories extends Component {
     render(){
         return(
             <div>
-                <a href='/products/andrology'>Andrology</a>
+                <a href='/products/Andrology'>Andrology</a>
+                <a href='/products/Microinjectors'>Microinjectors</a>
+                <a href='/products/Incubators'>Incubators</a>
+                <a href='/products/Centerfuges'>Centerfuges</a>
             </div>
         );
     }
