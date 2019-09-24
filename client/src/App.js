@@ -7,6 +7,7 @@ import Home from './pages/Home/Home.js';
 import Categories from './pages/Categories/Categories.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Products from './pages/Products/Products.js';
+import IndividualProduct from './pages/IndividualProduct/IndividualProduct.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
               <Route path='/categories/' component={Categories} />
               <Route path='/products/*' component={Products} />
+              <Route path='/product/*' component={IndividualProduct} />
           </Switch>
         </Router>
       <div className="homeContainer">

@@ -28,10 +28,11 @@ class Products extends Component {
                         <div className="productsContainer">
                             {this.state.products.map(product => {
                                 return(
-                                    <div>
+                                    <div className="individualProduct">
                                         <img src={product.imgLink[1]} alt="product"></img>
                                         <p><span className="productName">{product.name}</span> - ${product.price}</p>
                                         <p>{product.description}</p>
+                                        <a href={`/product/${product._id}`}>View Product</a>
                                     </div>
                                 );
                             })}
