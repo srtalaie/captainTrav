@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import API from '../../utils/API.js';
-import '../Products/style.css';
+import '../ProductsBackEnd/style.css';
 import ProductCard from '../../components/ProductCard.js';
 
-class Products extends Component {
+class ProductsBackEnd extends Component {
     state = {
         products: [],
         username: 'root',
@@ -177,4 +177,4 @@ class Products extends Component {
     }
 }
 
-export default Products;
+export default ProductsBackEnd;
