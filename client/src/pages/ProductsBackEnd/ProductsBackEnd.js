@@ -29,6 +29,7 @@ class ProductsBackEnd extends Component {
     }
 
     handleInput = (event) => {
+        console.log("change");
         const { name, value } = event.target;
         this.setState({
             [name]: value
@@ -127,7 +128,12 @@ class ProductsBackEnd extends Component {
                         <label for="newProductName">Name</label>
                         <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput} className="productInputs"></input>
                         <label for="newProductCategory">Category</label>
-                        <input type="text" name="newProductCategory" value={this.state.newProductCategory} onChange={this.handleInput} className="productInputs"></input>
+                        <select name="newProductCategory" value={this.state.newProductCategory} onChange={this.handleInput} className="productInputs">
+                            <option value="Andrology">Andrology</option>
+                            <option value="Microinjectors">Microinjectors</option>
+                            <option value="Incubators">Incubators</option>
+                            <option value="Centerfuges">Centerfuges</option>
+                        </select>
                         <label for="newProductDescription">Description</label>
                         <textarea  name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput} className="productInputs"></textarea>
                         <label for="newProductImgs">Image URLs (comma separated list)</label>

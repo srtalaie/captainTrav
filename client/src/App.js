@@ -8,7 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="homeContainer">
-      <Home />
+      {/* <Home /> */}
+      <ProductsBackEnd />
     </div>
   );
 }
