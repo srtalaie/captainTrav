@@ -10,8 +10,18 @@ import Products from './pages/Products/Products.js';
 
 function App() {
   return (
-    <div className="homeContainer">
-      <Categories />
+    
+    <div>
+        <Router>
+          <Link to="/categories">Categories</Link>
+          
+          <Switch>
+              <Route path='/categories/' component={Categories} />
+              <Route path='/products/*' component={Products} />
+          </Switch>
+        </Router>
+      <div className="homeContainer">
+      </div>
     </div>
   );
 }
