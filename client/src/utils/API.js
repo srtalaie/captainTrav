@@ -13,6 +13,10 @@ export default {
         return axios.get(`/api/getProduct/${id}`);
     },
 
+    getProductByCategory: function(category){
+        return axios.get(`/api/getProductbyCategory/${category}`);
+    },
+
     updateProduct: function(id, newProduct){
         return axios.put(`/api/updateProduct/${id}`, newProduct);
     },

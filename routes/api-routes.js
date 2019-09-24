@@ -30,6 +30,12 @@ module.exports = function(app){
        .catch(err => res.status(422).json(err))
    });
 
+    app.get("/api/getProductbyCategory/:category", function(req, res){
+       db.Product.find({ category: req.params.category })
+       .then(products => res.json(products))
+       .catch(err => res.status(422).json(err))
+   });
+
    //route = /api/updateProduct/:id to find a product and update by _id
    app.put("/api/updateProduct/:id", function(req, res){
         db.Product.findByIdAndUpdate({_id: req.params.id}, req.body)
