@@ -46,6 +46,7 @@ class ProductsBackEnd extends Component {
         };
 
         API.addProduct(newProduct)
+        .then(console.log(newProduct))
         .then(res => this.setState({ products: this.state.products.concat(res.data) }))
         .then(() => {
             this.setState({
@@ -129,6 +130,7 @@ class ProductsBackEnd extends Component {
                         <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput} className="productInputs"></input>
                         <label for="newProductCategory">Category</label>
                         <select name="newProductCategory" value={this.state.newProductCategory} onChange={this.handleInput} className="productInputs">
+                            <option value="" selected disabled hidden>Choose Product Category</option>
                             <option value="Andrology">Andrology</option>
                             <option value="Microinjectors">Microinjectors</option>
                             <option value="Incubators">Incubators</option>
