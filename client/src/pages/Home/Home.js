@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CarouselComponent from '../../components/Carousel/Carousel.js';
+import CarouselBottom from '../../components/CarouselBottom/CarouselBottom.js'
 import '../Home/style.css';
 import PreviousClients from '../../components/PreviousClients/PreviousClients.js';
 import Testimonials from '../../components/Testimonials/Testimonials.js'
@@ -25,6 +26,13 @@ class Home extends Component {
                     />
 
                     <Testimonials
+                        imgLink1 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                        imgLink2 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                        imgLink3 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
+                    />
+                    
+                    
+                    <CarouselBottom 
                         imgLink1 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
                         imgLink2 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
                         imgLink3 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
