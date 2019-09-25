@@ -14,9 +14,12 @@ function App() {
     
     <div>
         <Router>
+          <Link to="/">Home</Link>
           <Link to="/categories">Categories</Link>
-          
+          <Link to="/admin">Admin</Link>
           <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/admin' component={ProductsBackEnd} />
               <Route path='/categories/' component={Categories} />
               <Route path='/products/*' component={Products} />
               <Route path='/product/*' component={IndividualProduct} />
