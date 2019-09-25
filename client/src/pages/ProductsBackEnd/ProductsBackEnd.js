@@ -68,7 +68,7 @@ class ProductsBackEnd extends Component {
                 newProductDescription: product.description,
                 newProductCategory: product.category,
                 newProductImgs: product.imgLink.toString(),
-                newProductPrice: product.price
+                newProductPrice: parseFloat(product.price)
         });
     }
 
