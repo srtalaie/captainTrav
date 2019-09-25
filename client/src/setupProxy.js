@@ -6,7 +6,12 @@ const proxy = require("http-proxy-middleware");
 
 module.exports = function(app) {
   app.use('/api', proxy({
-    target: 'http://localhost:3001' || "https://safe-crag-59591.herokuapp.com/",
+    target: 'https://safe-crag-59591.herokuapp.com/',
     changeOrigin: true,
+    router: {
+      // when request.headers.host == 'dev.localhost:3000',
+      // override target 'http://www.example.org' to 'http://localhost:8000'
+      'dev.localhost:3000': 'http://localhost:3001'
+    }
   }));
 };
