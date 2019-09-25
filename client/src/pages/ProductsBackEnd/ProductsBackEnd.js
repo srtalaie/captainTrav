@@ -82,7 +82,7 @@ class ProductsBackEnd extends Component {
             description: this.state.newProductDescription,
             category: this.state.newProductCategory,
             imgLink: this.state.newProductImgs.split(',').map(function(string){ return string.trim(); }),
-            price: parseInt(this.state.newProductPrice)
+            price: parseFloat(this.state.newProductPrice)
         };
 
         API.updateProduct(this.state.currentProductId, newEditedProduct)
