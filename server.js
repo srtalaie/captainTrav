@@ -10,7 +10,6 @@ const cors = require("cors");
 const proxy = require('./client/src/setupProxy.js');
 
 // Define middleware here
-proxy();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

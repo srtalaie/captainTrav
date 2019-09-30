@@ -15,21 +15,26 @@ const proxy = require("http-proxy-middleware");
 //     }
 //   }));
 
-// module.exports = app => {
+module.exports = app => {
+  app.use(proxy('/api/**', { 
+    target: 'http://localhost:3001',
+    changeOrigin: true,
+    router: function(req) {
+      console.log(req.headers.host);
+      if(req.headers.host !== 'localhost:3000'){
+        return 'https://safe-crag-59591.herokuapp.com'
+      } else {
+        return 'http://localhost:3001'
+      }
+    }
+  }));
+
+// module.exports = (app) => {
 //   app.use(proxy('/api/**', { 
-//     target: 'http://localhost:3001',
+//     target: 'https://safe-crag-59591.herokuapp.com',
 //     changeOrigin: true,
 //     router: {
-//       'https://safe-crag-59591.herokuapp.com/api/**': "https://safe-crag-59591.herokuapp.com/"
+//       'localhost:3000/api/**': "http://localhost:3001/api/**"
 //     } 
-//   }));
-
-module.exports = (app) => {
-  app.use(proxy('/api/**', { 
-    target: 'https://safe-crag-59591.herokuapp.com',
-    changeOrigin: true,
-    router: {
-      'localhost:3000/api/**': "http://localhost:3001/api/**"
-    } 
-  })); 
+//   })); 
 };
