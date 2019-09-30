@@ -25,8 +25,7 @@ const proxy = require("http-proxy-middleware");
 
 module.exports = function(app) {
   app.use(proxy('/api/**', { 
-    target: 'https://safe-crag-59591.herokuapp.com/',
-    changeOrigin: true,
+    target: 'https://safe-crag-59591.herokuapp.com/*',
     router: {
       'http://localhost:3001/**': "http://localhost:3001"
   } 
