@@ -15,7 +15,7 @@ const proxy = require("http-proxy-middleware");
 //     }
 //   }));
 
-// module.exports = function(app) {
+// module.exports = app => {
 //   app.use(proxy('/api/**', { 
 //     target: 'http://localhost:3001',
 //     changeOrigin: true,
@@ -26,10 +26,10 @@ const proxy = require("http-proxy-middleware");
 
 module.exports = (app) => {
   app.use(proxy('/api/**', { 
-    target: 'https://safe-crag-59591.herokuapp.com/',
+    target: 'https://safe-crag-59591.herokuapp.com',
     changeOrigin: true,
     router: {
-      'http://localhost:3001/api/**': "http://localhost:3001"
+      'localhost:3000/api/**': "http://localhost:3001/api/**"
     } 
   })); 
 };
