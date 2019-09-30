@@ -7,8 +7,10 @@ const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
+const proxy = require('./client/src/setupProxy.js');
 
 // Define middleware here
+proxy();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
