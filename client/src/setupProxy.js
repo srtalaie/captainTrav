@@ -15,13 +15,13 @@ const proxy = require("http-proxy-middleware");
 //     }
 //   }));
 
-module.exports = function(app) {
-  app.use(proxy('/api/**', { 
-    target: 'http://localhost:3001',
-    router: {
-      'https://safe-crag-59591.herokuapp.com/api/**': "https://safe-crag-59591.herokuapp.com/"
-  } 
-  }));
+// module.exports = function(app) {
+//   app.use(proxy('/api/**', { 
+//     target: 'http://localhost:3001',
+//     router: {
+//       'https://safe-crag-59591.herokuapp.com/api/**': "https://safe-crag-59591.herokuapp.com/"
+//   } 
+//   }));
 
 module.exports = function(app) {
   app.use(proxy('/api/**', { 
