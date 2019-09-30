@@ -6,7 +6,7 @@ const proxy = require("http-proxy-middleware");
 
 module.exports = function(app) {
   app.use('/api', proxy({
-    target: 'safe-crag-59591.herokuapp.com',
+    target: 'http://safe-crag-59591.herokuapp.com',
     changeOrigin: true,
     secure: false,
     ws: true,
