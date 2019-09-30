@@ -24,7 +24,7 @@ const proxy = require("http-proxy-middleware");
 //     } 
 //   }));
 
-module.exports = function(app) {
+module.exports = (app) => {
   app.use(proxy('/api/**', { 
     target: 'https://safe-crag-59591.herokuapp.com/',
     changeOrigin: true,
