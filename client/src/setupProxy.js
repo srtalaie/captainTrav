@@ -9,7 +9,6 @@ module.exports = function(app) {
     target: 'https://safe-crag-59591.herokuapp.com',
     changeOrigin: true,
     prependPath: true,
-    secure: false,
     ws: true,
     router: {
       'localhost:3000': 'http://localhost:3001'
