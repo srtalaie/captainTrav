@@ -19,7 +19,6 @@ module.exports = function(app){
    
    //route = /api/getAllProduct to get all products
    app.get("/api/getAllProduct", function(req, res){
-       console.log(req.hostname)
        db.Product.find({})
        .then(products => res.json(products))
        .catch(err => res.status(422).json(err))
