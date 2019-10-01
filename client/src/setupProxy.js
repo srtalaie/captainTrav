@@ -9,9 +9,9 @@ module.exports = function(app) {
     target: 'http://localhost:3001',
     changeOrigin: true,
     logLevel: 'debug',
-    // router: {
-    //   'localhost:3000': 'http://localhost:3001'
-    // }
+    router: {
+      'safe-crag-59591.herokuapp.com': 'http://safe-crag-59591.herokuapp.com'
+    }
   }));
 
 // module.exports = app => {
