@@ -22,7 +22,7 @@ function App() {
               <Route path='/categories/' component={Categories} />
               <Route path='/products/*' component={Products} />
               <Route path='/product/*' component={IndividualProduct} />
-              <Route exact path='/' component={Home} />
+              <Route exact path='' component={Home} />
           </Switch>
         </Router>
       <div className="homeContainer">
