@@ -10,7 +10,7 @@ module.exports = function(app) {
     changeOrigin: true,
     logLevel: 'debug',
     router: {
-      'safe-crag-59591.herokuapp.com': 'http://safe-crag-59591.herokuapp.com'
+      'safe-crag-59591.herokuapp.com': 'https://safe-crag-59591.herokuapp.com'
     }
   }));
 
