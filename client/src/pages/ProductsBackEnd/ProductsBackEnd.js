@@ -126,9 +126,9 @@ class ProductsBackEnd extends Component {
             <div>
                 <div className="container">
                     <div className="productCreate">
-                        <label for="newProductName">Name</label>
+                        <label for="newProductName">Name:</label>
                         <input type="text" name="newProductName" value={this.state.newProductName} onChange={this.handleInput} className="productInputs"></input>
-                        <label for="newProductCategory">Category</label>
+                        <label for="newProductCategory">Category:</label>
                         <select name="newProductCategory" value={this.state.newProductCategory} onChange={this.handleInput} className="productInputs">
                             <option value="" selected disabled hidden>Choose Product Category</option>
                             <option value="Andrology">Andrology</option>
@@ -136,11 +136,11 @@ class ProductsBackEnd extends Component {
                             <option value="Incubators">Incubators</option>
                             <option value="Centerfuges">Centerfuges</option>
                         </select>
-                        <label for="newProductDescription">Description</label>
+                        <label for="newProductDescription">Description:</label>
                         <textarea  name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput} className="productInputs"></textarea>
-                        <label for="newProductImgs">Image URLs (comma separated list)</label>
+                        <label for="newProductImgs">Image URLs (comma separated list):</label>
                         <input type="text" name="newProductImgs" value={this.state.newProductImgs} onChange={this.handleInput} className="productInputs"></input>
-                        <label for="newProductPrice">Price</label>
+                        <label for="newProductPrice">Price:</label>
                         <input type="text" name="newProductPrice" value={this.state.newProductPrice} onChange={this.handleInput} className="productInputs"></input>
                         {this.state.beingEdited ? (
                             <div>
