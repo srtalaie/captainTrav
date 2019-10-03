@@ -31,20 +31,3 @@
     transform: rotate(360deg);
   }
 }
-
-.navigationBar {
-  display: flex;
-  flex-direction: row-reverse;
-  border-bottom: 2px solid #282c34;
-  background-color: #282c34ed ;
-  color: #007bff;
-}
-
-.navLink {
-  text-decoration: none;
-  margin-right: 10px;
-}
-
-.navLink:hover {
-  text-decoration: none;
-}
