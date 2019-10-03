@@ -6,11 +6,19 @@ class Categories extends Component {
 
     render(){
         return(
-            <div>
-                <a href='/products/Andrology'>Andrology</a>
-                <a href='/products/Microinjectors'>Microinjectors</a>
-                <a href='/products/Incubators'>Incubators</a>
-                <a href='/products/Centerfuges'>Centerfuges</a>
+            <div className="categoriesContainer">
+                <div className="categoryLink">
+                    <a href='/products/Andrology'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                </div>
+                <div className="categoryLink">
+                    <a href='/products/Microinjectors'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                </div>
+                <div className="categoryLink">
+                    <a href='/products/Incubators'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                </div>
+                <div className="categoryLink">
+                    <a href='/products/Centerfuges'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                </div>
             </div>
         );
     }

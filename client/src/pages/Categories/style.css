@@ -1,0 +1,17 @@
+.categoriesContainer {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoryLink {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+}
+
+.categoryLink a {
+    display: inline-block;
+}
