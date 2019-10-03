@@ -32,10 +32,6 @@
   }
 }
 
-.homeContainer {
-  font-family: 'Roboto', sans-serif;
-}
-
 .navigationBar {
   display: flex;
   flex-direction: row-reverse;
