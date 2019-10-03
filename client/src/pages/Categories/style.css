@@ -1,17 +1,22 @@
 .categoriesContainer {
     font-family: 'Roboto', sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .categoryLink {
     display: flex;
     justify-content: center;
-    margin: 20px;
-    flex-grow: 1;
-    flex-wrap: nowrap;
+    margin: 10vh 10vh;
 }
 
 .categoryLink a {
     display: inline-block;
+}
+
+img {
+    height: 40vh;
+    width: 40vh;
 }
