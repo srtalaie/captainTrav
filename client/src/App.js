@@ -11,11 +11,14 @@ import IndividualProduct from './pages/IndividualProduct/IndividualProduct.js';
 
 function App() {
   return (
-    <div>
+    
+    <div className="homeContainer">
         <Router>
-          <Link to="/">Home</Link>
-          <Link to="/categories">Categories</Link>
-          <Link to="/admin">Admin</Link>
+          <div className="navigationBar">            
+            <Link className="navLink" to="/admin">Admin</Link>
+            <Link className="navLink" to="/categories">Categories</Link>
+            <Link className="navLink" to="/">Home</Link>
+          </div>
           <Switch>
               <Route exact path='/admin' component={ProductsBackEnd} />
               <Route path='/categories/' component={Categories} />
@@ -24,8 +27,6 @@ function App() {
               <Route exact path='' component={Home} />
           </Switch>
         </Router>
-      <div className="homeContainer">
-      </div>
     </div>
   );
 }
