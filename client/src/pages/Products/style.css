@@ -1,0 +1,26 @@
+.productsContainer {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productImg {
+    display: flex;
+    justify-content: center;
+    margin: 8vh 8vh;
+}
+
+.productLink {
+    text-decoration: none;
+}
+
+.categoryLink img {
+    height: 40vh;
+    width: 40vh;
+}
+
+.individualProduct {
+    text-align: center;
+}
