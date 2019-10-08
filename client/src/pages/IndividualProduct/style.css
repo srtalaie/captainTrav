@@ -1,0 +1,45 @@
+.indProductContainer {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 30px;
+    justify-content: center;
+}
+
+.indProductImgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.indProductFirstImg {
+    max-width:100%;
+    max-height:100%;
+}
+
+.indProductImgRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.indProductImgALink {
+    display: inline-block;
+}
+
+.indProductImgThumb {
+    height: 5vh;
+    width: 5vh;
+}
+
+.indProductInfo {
+    margin-left: 20vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.indProductInfo h1, h4, h6{
+    margin-bottom: 10vh;
+}

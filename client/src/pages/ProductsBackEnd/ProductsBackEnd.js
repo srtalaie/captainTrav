@@ -29,7 +29,6 @@ class ProductsBackEnd extends Component {
     }
 
     handleInput = (event) => {
-        console.log("change");
         const { name, value } = event.target;
         this.setState({
             [name]: value
