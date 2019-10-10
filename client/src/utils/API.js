@@ -23,5 +23,9 @@ export default {
 
     deleteProduct: function(id){
         return axios.delete(`/api/deleteProduct/${id}`);
+    },
+
+    sendEmail: function(message){
+        return axios.post('/api/sendEmail', message);
     }
 }
