@@ -91,14 +91,17 @@ class IndividualProduct extends Component {
                         <h6>{this.state.description}</h6>
                     </div>
                 </div>
-                <div>
-                    <label for="userName">Name (required):</label>
-                    <input type="text" name="userName" value={this.state.userName} onChange={this.handleInput}></input>
-                    <label for="userEmail">Email (required):</label>
-                    <input type="text" name="userEmail" value={this.state.userEmail} onChange={this.handleInput}></input>
-                    <label for="emailText">Message (optional):</label>
-                    <textarea type="text" name="emailText" value={this.state.emailText} onChange={this.handleInput}></textarea>
-                    <Button variant="outline-dark" onClick={this.sendMessage}>Request A Quote</Button>
+                <div className="quoteContainer">
+                    <div className="quoteForm">
+                        <h4 className="quoteFormHeading">Request a Quote</h4>
+                        <label for="userName">Name (required):</label>
+                        <input type="text" name="userName" value={this.state.userName} onChange={this.handleInput}></input>
+                        <label for="userEmail">Email (required):</label>
+                        <input type="text" name="userEmail" value={this.state.userEmail} onChange={this.handleInput}></input>
+                        <label for="emailText">Message (optional):</label>
+                        <textarea type="text" name="emailText" value={this.state.emailText} onChange={this.handleInput}></textarea>
+                        <Button variant="outline-dark" onClick={this.sendMessage}>Request A Quote</Button>
+                    </div>
                 </div>
             </div>
         );

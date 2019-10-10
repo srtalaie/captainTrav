@@ -43,3 +43,34 @@
 .indProductInfo h1, h4, h6{
     margin-bottom: 10vh;
 }
+
+.quoteContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.quoteForm {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: flex-start;
+}
+
+.quoteForm button, input, textarea, label {
+    margin-top: 5px;
+}
+
+.quoteForm button {
+    margin-bottom: 20px;
+}
+
+.quoteFormHeading {
+    margin-bottom: 5px;
+}
+
+.quoteForm input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
