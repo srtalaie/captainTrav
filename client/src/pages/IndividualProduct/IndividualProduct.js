@@ -17,7 +17,8 @@ class IndividualProduct extends Component {
         viewedImg: '',
         userName: '',
         userEmail: '',
-        emailText: ''
+        emailText: '',
+        showQuoteForm: false
     }
     
     componentDidMount(){
@@ -42,7 +43,8 @@ class IndividualProduct extends Component {
             .then(this.setState({
                 userEmail: '',
                 userName: '',
-                emailText: ''
+                emailText: '',
+                showQuoteForm: false
             }))
             .catch(err => console.log(err))
         }
@@ -73,6 +75,14 @@ class IndividualProduct extends Component {
         });
     }
 
+    toggleQuoteForm = () => {
+        if(this.state.showQuoteForm){
+            this.setState({ showQuoteForm: false })
+        }else{
+            this.setState({ showQuoteForm: true })
+        }
+    }
+
     render(){
         return(
             <div>
@@ -89,9 +99,11 @@ class IndividualProduct extends Component {
                         <h1 className="indProductName">{this.state.name}</h1>
                         <h4>${this.state.price}</h4>
                         <h6>{this.state.description}</h6>
+                        <Button variant="outline-dark" onClick={this.toggleQuoteForm}>Request A Quote</Button>
                     </div>
                 </div>
-                <div className="quoteContainer">
+                {this.state.showQuoteForm ? (
+                    <div className="quoteContainer">
                     <div className="quoteForm">
                         <h4 className="quoteFormHeading">Request a Quote</h4>
                         <label for="userName">Name (required):</label>
@@ -100,9 +112,12 @@ class IndividualProduct extends Component {
                         <input type="text" name="userEmail" value={this.state.userEmail} onChange={this.handleInput}></input>
                         <label for="emailText">Message (optional):</label>
                         <textarea type="text" name="emailText" value={this.state.emailText} onChange={this.handleInput}></textarea>
-                        <Button variant="outline-dark" onClick={this.sendMessage}>Request A Quote</Button>
+                        <Button variant="outline-dark" onClick={this.sendMessage}>Submit Request</Button>
                     </div>
                 </div>
+                ): (
+                    <div></div>
+                )}     
             </div>
         );
     }
