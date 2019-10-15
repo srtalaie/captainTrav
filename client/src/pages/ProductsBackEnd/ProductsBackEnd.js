@@ -6,8 +6,6 @@ import ProductCard from '../../components/ProductCard.js';
 class ProductsBackEnd extends Component {
     state = {
         products: [],
-        username: process.env.REACT_APP_USERNAME,
-        password: process.env.REACT_APP_PASSWORD,
         newProductName: '',
         newProductDescription: '',
         newProductCategory: '',
@@ -125,7 +123,7 @@ class ProductsBackEnd extends Component {
     }
     
     login = () => {
-        if(this.state.usernameInput === this.state.username && this.state.usernamePass === this.state.password){
+        if(this.state.usernameInput === process.env.REACT_APP_USERNAME && this.state.usernamePass === process.env.REACT_APP_PASSWORD){
             this.setState({ accountCheck: true, hideLogin: true })
         }
     }
