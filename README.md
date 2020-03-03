@@ -1,6 +1,8 @@
 # captainTrav
 A site for a lab equipment company
+
 [Link](https://safe-crag-59591.herokuapp.com/)
+
 Built with Node/Express for the back end with MongoDB as the database.
 
 Front end was built using React.js.
