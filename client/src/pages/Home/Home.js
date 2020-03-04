@@ -3,7 +3,7 @@ import CarouselComponent from '../../components/Carousel/Carousel.js';
 import CarouselBottom from '../../components/CarouselBottom/CarouselBottom.js'
 import '../Home/style.css';
 import PreviousClients from '../../components/PreviousClients/PreviousClients.js';
-import Testimonials from '../../components/Testimonials/Testimonials.js'
+import Testimonials from '../../components/Testimonials/Testimonials.js';
 
 class Home extends Component {
     
@@ -18,11 +18,14 @@ class Home extends Component {
 
                 <div className="homePageContainer">
                     <PreviousClients
-                        imgLink1 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
-                        imgLink2 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
-                        imgLink3 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
-                        imgLink4 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
-                        imgLink5 = {'https://i.pinimg.com/236x/9d/0e/95/9d0e959cea5f993eaa560e275da7893b--harvard-college-harvard-university.jpg'}
+                        imgLink1 = {process.env.PUBLIC_URL + '/assets/images/usc.png'}
+                        imgLink2 = {process.env.PUBLIC_URL + '/assets/images/quest.png'}
+                        imgLink3 = {process.env.PUBLIC_URL + '/assets/images/cal.png'}
+                        imgLink4 = {process.env.PUBLIC_URL + '/assets/images/sdsu.png'}
+                        imgLink5 = {process.env.PUBLIC_URL + '/assets/images/genomic.png'}
+                        imgLink6 = {process.env.PUBLIC_URL + '/assets/images/cgh.png'}
+                        imgLink7 = {process.env.PUBLIC_URL + '/assets/images/23me.png'}
+                        imgLink8 = {process.env.PUBLIC_URL + '/assets/images/ucsd.png'}
                     />
 
                     <Testimonials
