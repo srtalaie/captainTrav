@@ -28,11 +28,7 @@ class Home extends Component {
                         imgLink8 = {process.env.PUBLIC_URL + '/assets/images/ucsd.png'}
                     />
 
-                    <Testimonials
-                        imgLink1 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
-                        imgLink2 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
-                        imgLink3 = {'http://skyworld.com/wp-content/uploads/2015/09/SkyWorld-Hero-img-v2-1.jpg'}
-                    />
+                    <Testimonials />
                     
                     
                     <CarouselBottom 

@@ -3,49 +3,45 @@ import '../Testimonials/style.css';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 
-const PreviousClients = ({ imgLink1, imgLink2, imgLink3 }) => (
+const PreviousClients = () => (
     <div className="testimonialsWrapper">
         <h1>Testimonials</h1>
         <CardDeck>
             <Card>
-                <Card.Img variant="top" src={imgLink1} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>John Doe</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Director of Lab at 23 and Me</Card.Subtitle>
                 <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada orci libero, a luctus turpis tristique sed. Integer et orci arcu. Proin sollicitudin est dignissim dolor mattis, sit amet molestie libero lobortis. Suspendisse sit amet hendrerit lectus. Donec libero ipsum, accumsan eu lorem id, convallis molestie nibh. Integer egestas blandit libero, et aliquam turpis molestie sit amet. Sed vulputate metus sollicitudin est dapibus, at efficitur velit bibendum."
                 </Card.Text>
                 </Card.Body>
-                {/* <Card.Footer>
+                <Card.Footer>
                 <small className="text-muted">Business done on July 4th, 1776</small>
-                </Card.Footer> */}
+                </Card.Footer>
             </Card>
             <Card>
-                <Card.Img variant="top" src={imgLink2} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Jane Doe</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Horse Breeder at Woodranch</Card.Subtitle>
                 <Card.Text>
-                    This card has supporting text below as a natural lead-in to additional
-                    content.{' '}
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada orci libero, a luctus turpis tristique sed. Integer et orci arcu. Proin sollicitudin est dignissim dolor mattis, sit amet molestie libero lobortis. Suspendisse sit amet hendrerit lectus. Donec libero ipsum, accumsan eu lorem id, convallis molestie nibh. Integer egestas blandit libero, et aliquam turpis molestie sit amet. Sed vulputate metus sollicitudin est dapibus, at efficitur velit bibendum. Nulla rhoncus nisi eu nisi fermentum, id ultrices tortor blandit. Suspendisse urna eros, hendrerit eu malesuada pulvinar, dignissim non nulla. Nam at blandit augue.""
                 </Card.Text>
                 </Card.Body>
-                {/* <Card.Footer>
+                <Card.Footer>
                 <small className="text-muted">Business done on July 4th, 1776</small>
-                </Card.Footer> */}
+                </Card.Footer>
             </Card>
             <Card>
-                <Card.Img variant="top" src={imgLink3} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>John Smith</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Research Lead at UCSD Bio Lab</Card.Subtitle>
                 <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first to
-                    show that equal height action.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada orci libero, a luctus turpis tristique sed. Integer et orci arcu. Proin sollicitudin est dignissim dolor mattis, sit amet molestie libero lobortis. Suspendisse sit amet hendrerit lectus."
                 </Card.Text>
                 </Card.Body>
-                {/* <Card.Footer>
+                <Card.Footer>
                 <small className="text-muted">Business done on July 4th, 1776</small>
-                </Card.Footer> */}
+                </Card.Footer>
             </Card>
         </CardDeck>
     </div>
