@@ -9,15 +9,19 @@ class Categories extends Component {
             <div className="categoriesContainer">
                 <div className="categoryLink">
                     <a href='/products/Andrology'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                    <p>Andrology</p>
                 </div>
                 <div className="categoryLink">
                     <a href='/products/Microinjectors'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                    <p>Microinjectors</p>
                 </div>
                 <div className="categoryLink">
                     <a href='/products/Incubators'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                    <p>Incubators</p>
                 </div>
                 <div className="categoryLink">
                     <a href='/products/Centerfuges'><img src="https://media.springernature.com/lw450/springer-cms/rest/v1/content/16129430/data/v1" alt="category"></img></a>
+                    <p>Centrifuges</p>
                 </div>
             </div>
         );
