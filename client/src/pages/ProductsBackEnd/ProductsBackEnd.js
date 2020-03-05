@@ -16,8 +16,8 @@ class ProductsBackEnd extends Component {
         beingEdited: false,
         accountCheck: false,
         hideLogin: false,
-        usernameInput: '',
-        usernamePass: ''
+        usernameInput: 'admin',
+        usernamePass: 'root'
     }
 
     componentDidMount(){
@@ -144,7 +144,7 @@ class ProductsBackEnd extends Component {
                                     <option value="Andrology">Andrology</option>
                                     <option value="Microinjectors">Microinjectors</option>
                                     <option value="Incubators">Incubators</option>
-                                    <option value="Centerfuges">Centerfuges</option>
+                                    <option value="Centrifuges">Centrifuges</option>
                                 </select>
                                 <label for="newProductDescription">Description:</label>
                                 <textarea  name="newProductDescription" value={this.state.newProductDescription}onChange={this.handleInput} className="productInputs"></textarea>

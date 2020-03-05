@@ -20,7 +20,7 @@ class Categories extends Component {
                     <p>Incubators</p>
                 </div>
                 <div className="categoryLink">
-                    <a href='/products/Centerfuges'><img src={process.env.PUBLIC_URL + '/assets/images/product_cat/centrifuge.png'} alt="category"></img></a>
+                    <a href='/products/Centrifuges'><img src={process.env.PUBLIC_URL + '/assets/images/product_cat/centrifuge.png'} alt="category"></img></a>
                     <p>Centrifuges</p>
                 </div>
             </div>
